@@ -1,0 +1,202 @@
+        /* =======================================================
+           1. GLOBAL STYLES & LAYOUT (Light & Dark Combined)
+           ======================================================= */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f7;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.2s ease;
+        }
+        body.dark-mode { 
+            background-color: #0d0d11; 
+        }
+        
+        .dark-mode .main-container { 
+            background-color: #1a1a1e; 
+            border-color: #2c2c32; 
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #d1d1d6; border-radius: 10px; }
+        .dark-mode ::-webkit-scrollbar-thumb { background: #48484a; }
+
+        /* =======================================================
+           2. INPUTS, TEXTAREA & SELECTS (Light & Dark Combined)
+           ======================================================= */
+        input, select, textarea {
+            color: #1c1c1e !important;
+            background-color: #ffffff;
+            transition: all 0.15s ease;
+        }
+        body.dark-mode input, body.dark-mode select, body.dark-mode textarea { 
+            background-color: #25252a !important; 
+            border-color: #3a3a42 !important; 
+            color: #ffffff !important; 
+            transition: all 0.25s ease-in-out !important; 
+        }
+        .dark-mode label { color: #bbbbc1; }
+
+        /* HOVER STATE */
+        input:hover, textarea:hover, select:hover {
+            border-color: #FF9500 !important; 
+            background-color: rgba(255, 149, 0, 0.02) !important; 
+        }
+        body.dark-mode input:hover, body.dark-mode textarea:hover, body.dark-mode select:hover {
+            border-color: #FF9500 !important; 
+            background-color: rgba(255, 149, 0, 0.05) !important; 
+        }
+
+        /* FOCUS STATE */
+        input:focus, select:focus, textarea:focus {
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15); 
+            border-color: #FF9500 !important; 
+            background-color: #ffffff !important;
+            outline: none;
+        }
+        body.dark-mode input:focus, body.dark-mode textarea:focus, body.dark-mode select:focus {
+            border-color: #FF9500 !important;
+            box-shadow: 0 0 0 3px rgba(255, 149, 0, 0.35) !important; 
+            background-color: #202024 !important; 
+        }
+
+        /* Error States */
+        .input-error { 
+            border-color: #ff3b30 !important; 
+            border-width: 2px !important; 
+            background-color: #fff2f2 !important; 
+            box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.15) !important;
+        }
+        .dark-mode .input-error { 
+            border-color: #ff453a !important; 
+            background-color: #3d1a1a !important; 
+        }
+
+        /* =======================================================
+           3. IMAGE SLOTS & PREVIEWS (Light & Dark Combined)
+           ======================================================= */
+        .image-slot { 
+            width: 100%; 
+            height: 140px; 
+            border: 2px dashed #e5e5ea; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            position: relative; 
+            cursor: pointer; 
+            background: #F3F4F6; 
+            overflow: hidden; 
+            border-radius: 16px;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @media (min-width: 768px) {
+            .image-slot { height: 450px; border-radius: 16px; }
+            .first-slot { height: 230px !important; }
+        }
+        .image-slot span { font-size: 12px; font-weight: 500; color: #8e8e93; text-align: center; letter-spacing: -0.1px; padding: 0 16px;}
+        .image-slot img { width: 100%; height: 100%; object-fit: fill; position: absolute; top: 0; left: 0; cursor: pointer; }
+        
+        .image-slot:hover { border-color: #007AFF; background-color: rgba(0, 122, 255, 0.02); transform: translateY(-2px); }
+        .image-slot:active { transform: scale(0.98) translateY(0); }
+
+        .dark-mode .image-slot { background: #25252a; border-color: #3a3a42; }
+        .dark-mode .image-slot:hover { border-color: #0a84ff; background-color: rgba(10, 132, 255, 0.04); }
+        .dark-mode .image-slot span { color: #9a9a9f; }
+
+        /* Action Buttons */
+        .delete-img { position: absolute; top: 10px; right: 10px; background: rgba(255,59,48,0.95); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: bold; z-index: 20; backdrop-filter: blur(8px); box-shadow: 0 2px 8px rgba(255,59,48,0.3); transition: transform 0.15s; }
+        .delete-img:hover { transform: scale(1.1); }
+        
+        .lens-btn { position: absolute; bottom: 10px; right: 10px; background: rgba(0, 122, 255, 0.95); color: white; border-radius: 8px; padding: 5px 10px; font-size: 11px; font-weight: 600; z-index: 21; backdrop-filter: blur(8px); box-shadow: 0 4px 12px rgba(0,122,255,0.25); transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .lens-btn:hover { background: #007AFF; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,122,255,0.35); }
+        .lens-btn:active { transform: translateY(0) scale(0.98); }
+
+        /* =======================================================
+           4. TOAST NOTIFICATION & ANIMATIONS
+           ======================================================= */
+        #toast {
+            visibility: hidden;
+            min-width: 340px;
+            max-width: 90%;
+            background-color: rgba(28, 28, 30, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            color: #fff;
+            text-align: center;
+            border-radius: 16px;
+            padding: 16px 24px;
+            position: fixed;
+            z-index: 100;
+            left: 50%;
+            bottom: -60px;
+            transform: translateX(-50%);
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15), opacity 0.3s ease, visibility 0.4s;
+            opacity: 0;
+        }
+        #toast.show { visibility: visible; bottom: 30px; opacity: 1; }
+
+        @keyframes breathing-red {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.6); background-color: #FF3B30 !important; color: white !important; }
+            50% { box-shadow: 0 0 0 10px rgba(255, 59, 48, 0); background-color: #FF453A !important; color: white !important; }
+        }
+        .red-breath { animation: breathing-red 1.4s infinite ease-in-out; }
+        
+        /* SEARCH GLOW ANIMATION */
+        @keyframes success-glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(52,199,89, 0.2); border-color: #34C759; }
+            50% { box-shadow: 0 0 15px rgba(52,199,89, 0.8); border-color: #34C759; }
+        }
+        .search-glow-active {
+            animation: success-glow 1.5s infinite ease-in-out !important;
+            background-color: #e8f9ee !important;
+            color: #34C759 !important;
+            border-color: #34C759 !important;
+        }
+        .dark-mode .search-glow-active {
+            background-color: rgba(52, 199, 89, 0.15) !important;
+        }
+
+        /* =======================================================
+           5. BUTTONS, MODALS & UTILITY FIXES
+           ======================================================= */
+        .theme-icon-btn { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        body.dark-mode button, body.dark-mode div, body.dark-mode h3, body.dark-mode span { transition: none !important; }
+
+        body.dark-mode #converter-btn,
+        body.dark-mode #hub-master-btn,
+        body.dark-mode [onclick="openModal('export')"],
+        body.dark-mode #theme-toggle-btn,
+        body.dark-mode [onclick="openExcelDataModal()"] {
+            transition: all 0.2s ease-in-out !important;
+        }
+
+        body.dark-mode #converter-btn:hover { background-color: #FF9500 !important; color: #ffffff !important; }
+        body.dark-mode #hub-master-btn:hover { background-color: #5856D6 !important; color: #ffffff !important; }
+        body.dark-mode [onclick="openModal('export')"]:hover { background-color: #007AFF !important; color: #ffffff !important; }
+        body.dark-mode #theme-toggle-btn:hover { background-color: #007AFF !important; color: #ffffff !important; }
+        body.dark-mode [onclick="openExcelDataModal()"]:hover { background-color: #FF9500 !important; color: #ffffff !important; }
+
+        body.dark-mode #action-modal .bg-\[\#007AFF\]\/10 { background-color: rgba(10, 132, 255, 0.2) !important; color: #0a84ff !important; }
+        body.dark-mode #action-modal .bg-\[\#34C759\]\/10 { background-color: rgba(48, 209, 88, 0.2) !important; color: #30d158 !important; }
+        body.dark-mode #action-modal .bg-\[\#FF9500\]\/10 { background-color: rgba(255, 159, 10, 0.2) !important; color: #ff9f0a !important; }
+        body.dark-mode #action-modal .bg-\[\#FF2D55\]\/10 { background-color: rgba(255, 45, 85, 0.2) !important; color: #ff2d55 !important; }
+        
+        body.dark-mode #action-modal .bg-\[\#007AFF\]\/10:hover { background-color: #007AFF !important; color: #ffffff !important; }
+        body.dark-mode #action-modal .bg-\[\#34C759\]\/10:hover { background-color: #34C759 !important; color: #ffffff !important; }
+        body.dark-mode #action-modal .bg-\[\#FF9500\]\/10:hover { background-color: #FF9500 !important; color: #ffffff !important; }
+        body.dark-mode #action-modal .bg-\[\#FF2D55\]\/10:hover { background-color: #FF2D55 !important; color: #ffffff !important; }
+
+        body.dark-mode #action-modal h3, body.dark-mode #work-engine-modal h3, body.dark-mode #converter-modal h3, body.dark-mode #master-convert-modal h3, body.dark-mode #duplicate-modal h3, body.dark-mode #hub-modal h3, body.dark-mode #excel-fill-modal h3, body.dark-mode #nc-manager-modal h3 { color: #ffffff !important; }
+        
+        .subcat-cell { position: relative; cursor: default; }
+
+        .dark-mode .bg-white { background-color: #1a1a1e; }
+        .dark-mode .border-gray-200, .dark-mode .border-t { border-color: #2c2c32 !important; }
+        .dark-mode .text-gray-800 { color: #f2f2f7 !important; }
+        .dark-mode .bg-gray-100 { background-color: #25252a !important; }
+        .dark-mode .bg-gray-50\/50 { background-color: #141417 !important; }
