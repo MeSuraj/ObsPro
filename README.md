@@ -57,3 +57,18 @@
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/MeSuraj/ObsPro.git](https://github.com/MeSuraj/ObsPro.git)
+Navigate to the project directory:
+Bash
+cd ObsPro
+Run the application:
+Open index.html directly in your web browser. No server setup or dependencies required.
+📁 Project Structure
+Plaintext
+ObsPro/
+├── index.html        # Main Application Interface
+├── app.js            # Core Application Functions & Logic
+└── styles/
+    └── styles.css    # Custom Styling & Dark Mode Rules
+👨‍💻 Author
+Created by MeSuraj.
+If you find this project useful, feel free to give it a ⭐️ Star on GitHub!
