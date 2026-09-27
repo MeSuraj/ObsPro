@@ -16,20 +16,20 @@
 
 ## 📖 Overview
 
-**OBS Pro** ek web-based automation aur management tool hai jo OBS task reports, image validations, coordinates lookup aur database management ko fast aur efficient banata hai. Is tool se aap Word (`.docx`) files ko instant JSON me convert kar sakte hain, Excel database link kar sakte hain, aur NC (Non-Conformance) tracking easily manage kar sakte hain.
+**OBS Pro** is a web-based automation and management tool designed to streamline OBS task reports, image validations, coordinate lookups, and database management. It enables instant conversion of Word (`.docx`) files into structured JSON data, seamlessly integrates with Excel databases, and simplifies Non-Conformance (NC) tracking.
 
 ---
 
 ## 🔥 Key Features
 
-- 📄 **Word to JSON Converter:** DOCX files ko instantly structured JSON data me convert karein (`Mammoth.js` engine ke saath).
-- 🗂️ **JSON Merge Engine:** Multiple JSON files ko ek single master database file me combine karein.
-- 📊 **Excel Matrix Integration:** Excel sheet link karke Lat/Long coordinates search karein aur NC details update karein.
-- 🔍 **Deep Global Search:** Active working stream aur backup repositories ke andar OBS Task IDs fast index aur search karein.
-- 📌 **Auto KML Link:** Job ID reference se Satellite Vector KML files view aur download karein.
-- ⚙️ **Custom NC Manager:** Non-conformance remark list ko customize, edit ya reset karein.
-- 🌗 **Dark & Light Mode:** Seamless theme switching smooth user experience ke liye.
-- 🖨️ **Export & Backup:** Single page export karein ya updated Excel matrix database download karein.
+- 📄 **Word to JSON Converter:** Instantly parse and convert DOCX files into structured JSON data using `Mammoth.js`.
+- 🗂️ **JSON Merge Engine:** Combine multiple JSON files into a single master database file.
+- 📊 **Excel Matrix Integration:** Link Excel spreadsheets to search Latitude/Longitude coordinates and update NC details.
+- 🔍 **Deep Global Search:** Fast indexing and retrieval of OBS Task IDs across active streams and backup repositories.
+- 📌 **Auto KML Link:** Easily view and download Satellite Vector KML files using Job ID references.
+- ⚙️ **Custom NC Manager:** Customize, edit, or reset non-conformance remark lists dynamically.
+- 🌗 **Dark & Light Mode:** Seamless theme switching for an optimal user experience.
+- 🖨️ **Export & Backup:** Export single-page reports or download updated Excel matrix databases.
 
 ---
 
@@ -40,7 +40,7 @@
 | **Frontend UI** | HTML5, Tailwind CSS |
 | **Logic & Scripting** | Vanilla JavaScript (ES6+) |
 | **Document Parsing** | Mammoth.js (Word to JSON) |
-| **Excel Processing** | SheetJS (xlsx.full.min.js) |
+| **Excel Processing** | SheetJS (xlsx) |
 | **Hosting** | GitHub Pages |
 
 ---
@@ -48,12 +48,12 @@
 ## 🌐 Live Demo & Repository Links
 
 - 🚀 **Live Application:** [https://mesuraj.github.io/ObsPro/](https://mesuraj.github.io/ObsPro/)
-- 💻 **GitHub Code Repo:** [https://github.com/MeSuraj/ObsPro](https://github.com/MeSuraj/ObsPro)
+- 💻 **GitHub Repository:** [https://github.com/MeSuraj/ObsPro](https://github.com/MeSuraj/ObsPro)
 
 ---
 
 ## ⚡ How to Run Locally
 
-1. **Repository Clone Karein:**
+1. **Clone the repository:**
    ```bash
    git clone [https://github.com/MeSuraj/ObsPro.git](https://github.com/MeSuraj/ObsPro.git)
