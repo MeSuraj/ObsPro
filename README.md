@@ -1,74 +1,89 @@
-<div align="center">
+Aapke **ObsPro** project ke liye ek attractive aur professional `README.md` taiyar hai, jise aap seedhe copy-paste kar sakte hain:
 
-# 📌 OBS Pro
+```markdown
+# 📌 OBS Pro - Task Automation & Data Converter Web Tool
 
-**Fast, Efficient & Intelligent OBS Task & Database Management System**
+[![Live Demo](https://img.shields.io/badge/Live-Demo%20Page-34C759?style=for-the-badge&logo=githubpages&logoColor=white)](https://mesuraj.github.io/ObsPro/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-007AFF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MeSuraj/ObsPro)
+[![Tech](https://img.shields.io/badge/Vanilla-JS%20%7C%20TailwindCSS-FF9500?style=for-the-badge)](https://mesuraj.github.io/ObsPro/)
 
-[![GitHub Pages](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=github)](https://mesuraj.github.io/ObsPro/)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/MeSuraj/ObsPro)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+**OBS Pro** ek client-side web application hai jo OBS task processing, Word to JSON conversion, Excel Matrix integration, aur image management ko simplify aur automate karta hai[cite: 1]. Ye tool manual data entry effort ko kam karne aur workflows ko fast banane ke liye design kiya gaya hai[cite: 1].
 
 ---
 
-</div>
+## 🚀 Live Application
 
-## 📖 Overview
-
-**OBS Pro** is a web-based automation and management tool designed to streamline OBS task reports, image validations, coordinate lookups, and database management. It enables instant conversion of Word (`.docx`) files into structured JSON data, seamlessly integrates with Excel databases, and simplifies Non-Conformance (NC) tracking.
+Aap is app ko direct browser me bina kisi installation ke use kar sakte hain:  
+👉 **[ObsPro Live Link](https://mesuraj.github.io/ObsPro/)**[cite: 1]
 
 ---
 
 ## 🔥 Key Features
 
-- 📄 **Word to JSON Converter:** Instantly parse and convert DOCX files into structured JSON data using `Mammoth.js`.
-- 🗂️ **JSON Merge Engine:** Combine multiple JSON files into a single master database file.
-- 📊 **Excel Matrix Integration:** Link Excel spreadsheets to search Latitude/Longitude coordinates and update NC details.
-- 🔍 **Deep Global Search:** Fast indexing and retrieval of OBS Task IDs across active streams and backup repositories.
-- 📌 **Auto KML Link:** Easily view and download Satellite Vector KML files using Job ID references.
-- ⚙️ **Custom NC Manager:** Customize, edit, or reset non-conformance remark lists dynamically.
-- 🌗 **Dark & Light Mode:** Seamless theme switching for an optimal user experience.
-- 🖨️ **Export & Backup:** Export single-page reports or download updated Excel matrix databases.
+* **🧬 Word to JSON Converter:** `.docx` files se metadata aur images extract karke structured JSON format me convert karta hai[cite: 1].
+* **🗂️ Multi-JSON Merge Tool:** Multiple JSON dataset files ko ek single master file me merge karta hai[cite: 1].
+* **🪢 Connection Database Hub:**
+  * **Excel Database Link:** Excel file attach karke live data query enable karein[cite: 1].
+  * **Backup Scanning:** Local backup folders ko fast scan aur index karein[cite: 1].
+  * **Active Engine IO Stream:** Live JSON file mount karke changes direct save karein[cite: 1].
+* **📊 Excel NC Update & Management:** Live NC (Non-Conformity) status aur remarks update karein custom suggestion list ki madad se[cite: 1].
+* **📌 Coordinates & KML Generator:** Single-click me Lat/Long coordinates copy karein aur Job ID ke basis par satellite KML file download karein[cite: 1].
+* **🔍 Fast Deep Search Indexing:** Active file aur local backup repository me high-speed record search[cite: 1].
+* **🎨 Modern UI & Dark Mode Support:** iOS-style responsive design dark aur light mode theme switcher ke saath[cite: 1].
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Component | Technology |
-| :--- | :--- |
-| **Frontend UI** | HTML5, Tailwind CSS |
-| **Logic & Scripting** | Vanilla JavaScript (ES6+) |
-| **Document Parsing** | Mammoth.js (Word to JSON) |
-| **Excel Processing** | SheetJS (xlsx) |
-| **Hosting** | GitHub Pages |
+* **Frontend:** HTML5, JavaScript (ES6+ Vanilla JS), CSS3[cite: 1]
+* **Styling Framework:** Tailwind CSS[cite: 1]
+* **Libraries:**
+  * [Mammoth.js](https://github.com/mwilliamson/mammoth.js) - Word document (.docx) reader[cite: 1]
+  * [SheetJS (xlsx)](https://github.com/SheetJS/sheetjs) - Excel parsing & file export[cite: 1]
 
 ---
 
-## 🌐 Live Demo & Repository Links
+## 📂 Project Architecture
 
-- 🚀 **Live Application:** [https://mesuraj.github.io/ObsPro/](https://mesuraj.github.io/ObsPro/)
-- 💻 **GitHub Repository:** [https://github.com/MeSuraj/ObsPro](https://github.com/MeSuraj/ObsPro)
+
+```
+
+ObsPro/
+├── index.html         # Main Application UI Structure
+├── app.js             # Core App Logic, Converters & Index Search
+├── styles/
+│   └── styles.css     # Custom Animations & Theme Styling
+└── README.md          # Documentation File
+
+```
 
 ---
 
-## ⚡ How to Run Locally
+## 💻 How to Run Locally
 
-1. **Clone the repository:**
+1. Repository ko clone karein:
    ```bash
    git clone [https://github.com/MeSuraj/ObsPro.git](https://github.com/MeSuraj/ObsPro.git)
-Navigate to the project directory:
-Bash
+
+```
+
+2. Project folder me jayein:
+```bash
 cd ObsPro
-Run the application:
-Open index.html directly in your web browser. No server setup or dependencies required.
-📁 Project Structure
-Plaintext
-ObsPro/
-├── index.html        # Main Application Interface
-├── app.js            # Core Application Functions & Logic
-└── styles/
-    └── styles.css    # Custom Styling & Dark Mode Rules
-👨‍💻 Author
-Created by MeSuraj.
-If you find this project useful, feel free to give it a ⭐️ Star on GitHub!
+
+```
+
+
+3. `index.html` file ko kisi bhi web browser me open karein.
+
+
+
+---
+
+## 👤 Author
+
+* **Suraj** - [GitHub Profile](https://www.google.com/search?q=https://github.com/MeSuraj&utm_source=gemini)
+
+```
+
+```
