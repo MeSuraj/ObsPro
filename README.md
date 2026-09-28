@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📌 OBS Pro
+# 📌 Work Automation Pro
 
 **An Intelligent, High-Performance OBS Task & Database Management Platform**
 
